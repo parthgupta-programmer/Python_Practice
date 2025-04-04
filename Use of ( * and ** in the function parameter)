@@ -1,0 +1,16 @@
+# Average Function to finding the average of numbers (Use of *in the fucntion parameter in front of the name of the parameter[Converting into LIST])
+
+def average(*numbers):
+    sum=0
+    for i in numbers:
+        sum=sum+i
+    print("Average of the sum=",sum/(len(numbers)),end="")
+average(1,2,3,4,5,6,7,8,9,10)
+
+print()
+
+# Name Function to print the full name (Use of ** in the function parameter in front of the name of the parameter[Converting into Dictionary])
+
+def name(**name):
+    print("Hello,",name["FirstName"],name["MiddleName"],name["LastName"])
+name(FirstName="Mahendra",LastName="Dhoni",MiddleName="Singh")
