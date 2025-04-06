@@ -1,0 +1,3 @@
+word="Hello"
+c1=ord(word[0])
+print(c1)
