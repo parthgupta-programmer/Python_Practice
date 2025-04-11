@@ -1,0 +1,12 @@
+# Exception Handling 
+num=(input())
+try:
+    for i in range(11):
+        print(f"{int(num)}x{i+1}={int(num)*(i+1)}")
+    l=[1,2,3,4,5]
+    print(l[int(num)])
+except ValueError:
+    print("Value entered is not a integer")
+    # print(e)
+except IndexError:
+    print("Index out of range...")
