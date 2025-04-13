@@ -1,0 +1,5 @@
+num=int(input("ENTER ANY NUMBER BETWEEN 1 AND 10"))
+if(num>10 or num<1):
+    raise ValueError("Please enter the number between  1 and 10")
+else:
+    print("You have entered a number between 1 and 10 i.e.",num)
