@@ -1,0 +1,7 @@
+#Enumerate function in Python
+fruits=["Apple","Banana","Orange","Grapes"]
+for index,fruit in enumerate(fruits):#By default:start=0
+    print(index,fruit)
+print()
+for index,fruit in enumerate(fruits,start=1):#When start=1
+    print(index,fruit)
