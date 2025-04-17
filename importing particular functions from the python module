@@ -1,0 +1,4 @@
+#importing particular functions from the python module
+from math import floor as f,ceil as c
+print(f(3.45678),c(3.45678))
+
