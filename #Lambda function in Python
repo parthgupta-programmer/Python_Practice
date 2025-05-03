@@ -1,0 +1,5 @@
+#Lambda function in Python
+
+sum=lambda x,y: x+y
+avg=lambda z : z/2
+print(avg(sum(5,8)))
