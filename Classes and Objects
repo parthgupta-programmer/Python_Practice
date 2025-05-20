@@ -1,0 +1,44 @@
+class batsman:
+    name="Virat"
+    age="31"
+    t20_runs=12393
+    One_day_runs=8934
+    strike_rate=243
+    def batsman_details(self):
+        print(f"Name of Batsman:{self.name}\nAge:{self.age}\nT20 Runs:{self.t20_runs}\nOne day Runs:{self.One_day_runs}\nStrike Rate:{self.strike_rate}\n\n")
+
+a=batsman()
+
+a.name="Mahendra Singh Dhoni"
+a.age=42
+a.t20_runs=11983
+a.One_day_runs=7835
+a.strike_rate=187
+
+b=batsman()
+
+b.name="Chris Gayle"
+b.age=39
+b.t20_runs=15879
+b.One_day_runs=13533
+b.strike_rate=248
+
+a.batsman_details()
+b.batsman_details()
+
+
+Output:
+
+
+Name of Batsman:Mahendra Singh Dhoni
+Age:42
+T20 Runs:11983
+One day Runs:7835
+Strike Rate:187
+
+
+Name of Batsman:Chris Gayle
+Age:39
+T20 Runs:15879
+One day Runs:13533
+Strike Rate:248
