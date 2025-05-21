@@ -1,0 +1,34 @@
+class bowler:
+    def __init__(self,name="Unknown",age=0,wickets_taken=0,economy_rate=0):
+        self.name=name
+        self.age=age
+        self.wickets_taken=wickets_taken
+        self.economy_rate=economy_rate
+        print(f"Name:{self.name}\nAge:{self.age}\nWickets taken:{self.wickets_taken}\nEconomy Rate:{self.economy_rate}\n")
+
+        
+        
+a=bowler("Jasprit Bumrah",33,242,4.6)#self is automically called as the first arguement
+b=bowler()#takes default values passed into the constructor
+
+
+
+# def __init__(self, name, age, wickets_taken, economy_rate):
+# This is the constructor method. It's a special method that runs automatically when a new object of the class is created. It initializes the object's attributes.
+# A class can have only one constructor.
+# Constructors are of two types:
+# 1.Default Constructor(When constructor accepts arguments with self)
+# 2.Parameterized Constructor(When constructor does not accept any arguments from the object and have only the one argument i.e. self)
+
+
+# Output:
+
+# Name:Jasprit Bumrah
+# Age:33
+# Wickets taken:242
+# Economy Rate:4.6
+
+# Name:Unknown
+# Age:0
+# Wickets taken:0
+# Economy Rate:0
