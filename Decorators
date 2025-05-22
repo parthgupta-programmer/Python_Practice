@@ -1,0 +1,7 @@
+def print_extra(function_name2):
+    def wrapper2():
+        print("Before the function called")
+        function_name2()
+        print("After the function called")
+    return wrapper2
+print_extra(say_hello)
