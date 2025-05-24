@@ -1,0 +1,26 @@
+class Person:
+    def __init__(self,acc_no,__acc_pass):
+        self.acc_no=acc_no
+        self.__acc_pass=__acc_pass #making the account password as private by writing the underscore(two times)before that attribute so that it is not accesible outside that class
+    def print_data(self):
+        print(f"Account No.{self.acc_no}\n Account Password:{self.__acc_pass}")
+    
+
+acc1=Person(12345,"KDKFHAJHD")
+
+print(acc1.acc_no)
+acc1.print_data()#However,Data can be accessed when the function in the class is printing or returning that sensitive information
+
+#That function can also be made private by the same method i.e.(__print_data(self))
+
+print(acc1.__acc_pass)
+
+
+# Output
+# 12345
+# Account No.12345
+# Account Password:KDKFHAJHD
+# Traceback (most recent call last):
+# File "c:\Users\HP\Desktop\Python_Pracatice\OOPS\Classes and Objects.py", line 43, in <module>
+#     print(acc1.__acc_pass)
+# AttributeError: 'Person' object has no attribute '__acc_pass'
