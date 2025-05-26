@@ -1,0 +1,39 @@
+#NORMAL METHOD
+
+class Student:
+    def __init__(self,name):
+        self.__name=name #private variable
+    def get_name(self):  #getter
+        return self.__name
+    def set_name(self,new_name):  #setter
+        self.__name=new_name
+s1=Student("Parth")
+print(s1.get_name())
+s1.set_name("PARTH GUPTA")
+print(s1.get_name())
+
+# Python also has a built-in way to make getters and setters easier using @property.
+
+class Student2:
+    def __init__(self,roll_no,admission_no):
+        self.__roll_no=roll_no
+        self.__admission_no=admission_no
+
+    @property 
+    def roll_no(self):  #getter for roll no
+        return self.__roll_no
+    
+    @property
+    def adm(self):   #only getter for admission no
+        return self.__admission_no
+    
+    @(roll_no).setter
+    def roll_no(self,new_roll_no): #setter for roll no
+        self.__roll_no=new_roll_no
+    
+s2=Student2(12345,98765)
+print(s2.roll_no) #Here,we do not require to call the function to call the method like we have done in the above example
+s2.roll_no=12346
+print(s2.roll_no)
+print(s2.adm)
+    
