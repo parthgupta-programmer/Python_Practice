@@ -1,0 +1,345 @@
+# Getters and Setters Problems
+
+# 1. Student Info:
+
+# Create a class Student with private attributes:
+# . __name
+# . __roll_no
+
+# How will you:
+# Get the name of the student?
+# Get and set the roll_no?
+
+# 2. Temperature Converter:
+
+# Create a class Temperature that stores temperature in Celsius.
+# How will you provide a read-only property fahrenheit that calculates and returns temperature in Fahrenheit?
+# What happens if someone tries to set the fahrenheit directly?
+
+# 3. Bank Account:
+
+# Create a class BankAccount with private __balance.
+# How will you get the balance?
+# How will you allow setting the balance only if the value is not negative?
+# What will happen if someone tries to set a negative balance?
+
+# 4. Rectangle Area Calculator:
+
+# Create a class Rectangle with private:
+# __width
+# __height
+# How will you get and set width and height?
+# How will you create a read-only property area that calculates width × height?
+
+# 5. Password Protected Email:
+
+# Create a class User with private __email.
+# How will you get the email?
+# How will you create a setter that only allows changing the email if a correct password is provided?
+
+# 6. Circle with Area:
+
+# Create a class Circle with:
+# A private variable __radius
+# How will you create a getter and setter for radius?
+# How will you create a read-only property area (using π × r²)?
+
+# 7. Auto-Capitalized Name:
+
+# Create a class Person with private __name.
+# How will you create a setter that automatically capitalizes the first letter of the name?
+
+
+# 8. Product with Discount:
+
+# Create a class Product with private __price.
+# How will you allow getting and setting the price?
+# How will you prevent setting the price below ₹10?
+# How will you create a read-only property discounted_price that returns the price after 10% discount?
+
+
+
+
+
+
+# class student:  #1
+#     def __init__(self,name,roll_no):
+#         self.__name=name
+#         self.__roll_no=roll_no
+#     @property
+#     def name(self):
+#         return self.__name
+#     @property
+#     def roll_no(self):
+#         return self.__roll_no
+#     @(roll_no).setter
+#     def roll_no(self,new_roll_no):
+#         self.__roll_no=new_roll_no
+
+# s=student("Virat",1235)
+# print(s.name)
+# s.roll_no=1234
+# print(s.roll_no)
+
+
+# Output 1:
+# Virat
+# 1234
+
+
+# class temp:   #2
+#     def __init__(self,cel):
+#         self.__cel=cel
+#     @property
+#     def fahrenheit(self):
+#         return (self.__cel + 273.15)
+# t1=temp(36)
+# print(t1.fahrenheit)
+# # t1.fahrenheit=310.35
+# # print(t1.fahrenheit) #  if someone tries to set the fahrenheit directly ,it will not set
+
+
+# Output 2 :
+# 309.15
+
+# class bank_account: #3
+#     def __init__(self,balance):
+#         if(balance<0):
+#             print("Initial balance cannot be negative.Setting to zero")
+#             self.__balance=0
+#         else:
+#             self.__balance=balance
+
+#     @property
+#     def bal(self):
+#         return self.__balance
+#     @(bal).setter
+#     def bal(self,set_balance):
+
+#         if(set_balance<0):
+#             print("You cannot set a negative balance")
+
+#         else:
+#             self.__balance=set_balance
+       
+
+# acc1=bank_account(-90.00)
+# print(acc1.bal)
+# acc1.bal=934821332324.45
+# print(acc1.bal)
+
+
+
+# Output 3 :
+# Initial balance cannot be negative.Setting to zero
+# 0
+# 934821332324.45
+
+
+
+# class rectangle: #4
+
+#     def __init__(self,width,height):
+#         self.__width=width
+#         self.__height=height
+
+#     @property
+#     def width(self):#width getter
+#         return self.__width
+    
+#     @(width).setter
+#     def width(self,new_width): #width setter
+#         self.__width=new_width
+
+#     @property
+#     def height(self):#height getter
+#         return self.__height
+    
+#     @(height).setter
+#     def height(self,new_height): #height setter
+#         self.__height=new_height
+
+#     @property
+#     def area(self):  # area getter
+#         return (self.__height * self.__width)
+
+
+# r1=rectangle(2,5)
+
+# print("Before Updation\n")
+# print("AREA:",r1.area)
+# print("Width:",r1.width)
+# print("Height:",r1.height)
+
+# print("\n")
+
+# r1.width=2.5
+# r1.height=3.5
+
+# print("After Updation\n")
+# print("AREA:",r1.area)
+# print("Width:",r1.width)
+# print("Height:",r1.height)
+
+
+# Output 4 :
+# Before Updation
+
+# AREA: 10
+# Width: 2
+# Height: 5
+
+
+# After Updation
+
+# AREA: 8.75
+# Width: 2.5
+# Height: 3.5
+
+
+
+
+# class User: #5
+#     def __init__(self,email,password):
+#         self.__email=email
+#         self.__password=password
+
+#     @property
+#     def email(self):
+#         return self.__email
+    
+#     @(email).setter
+
+#     def email(self,details):
+#         new_email,pswd_chck=details
+#         if(pswd_chck==self.__password):
+            
+#             self.__email=new_email
+#             print("Email updated successfully.")
+#         else:
+#             print("Password is incorrect.Email not changed.")
+
+# u1=User("virat.info@gmail.com","W@T#H*W!T")
+# print(u1.email)
+
+# u1.email=("viratkohli.info@gmail.com","W@T#H*W!T")
+# print("Updated Email:",end="")
+# print(u1.email)
+
+# Output 5 :
+
+# virat.info@gmail.com
+# Email updated successfully.
+# Updated Email:viratkohli.info@gmail.com
+
+
+
+
+
+# import math
+# class Circle: #6
+#     def __init__(self,radius):
+#         self.__radius=radius
+
+#     @property
+#     def radius(self):
+#         return self.__radius
+    
+#     @radius.setter
+#     def radius(self,new_rad):
+#         self.__radius=new_rad
+
+#     @property
+#     def area(self):
+#         return (self.__radius*self.__radius*math.pi)
+    
+# c1=Circle(3.0)
+
+# print("Before Updation:")
+# print("Radius:",c1.radius)
+# print("Area:",c1.area)
+
+# print("\n")
+
+# c1.radius=3.5
+
+# print("After Updation:")
+# print("Radius:",c1.radius)
+# print(f"Area:",c1.area)
+
+
+# Output 6:
+# Before Updation:
+# Radius: 3.0
+# Area: 28.274333882308138
+
+
+# After Updation:
+# Radius: 3.5
+# Area: 38.48451000647496
+
+# import string
+# class Person: #7
+#     def __init__(self,name):
+#         self.__name=name
+
+#     @property
+#     def caps(self):
+#         return self.__name
+    
+#     @caps.setter
+#     def caps(self,_):
+#         self.__name=self.__name.capitalize()
+
+# p1=Person("virat Kohli")
+# p1.caps=""
+# print(p1.caps)
+
+
+# Output 7:
+# Virat kohli
+    
+
+
+# class Product:  #8
+#     def __init__(self,price):
+#         self.__price=price
+#     @property
+#     def price(self):
+#         return self.__price
+#     @price.setter
+#     def price(self,new_price):
+#         if (new_price<10):
+#             print("You cannot set the price")
+#         else:
+#             self.__price=new_price
+#     @property
+#     def discounted_price(self):
+#         return (self.__price-(self.__price*0.1))
+    
+    
+# p1=Product(835.83)
+
+# print("Before Updation\n")
+# print("Price:",p1.price)
+# print("Discounted Price:",p1.discounted_price)
+
+# p1.price=983.92
+# print("\n")
+
+# print("After Updation\n")
+# print("Price:",p1.price)
+# print("Discounted Price:",p1.discounted_price)
+
+
+# Output 8:
+# Before Updation
+
+# Price: 835.83
+# Discounted Price: 752.2470000000001
+
+
+# After Updation
+
+# Price: 983.92
+# Discounted Price: 885.528
