@@ -1,0 +1,70 @@
+# class Animal:
+#     def eat(self):
+#         print("Animal eats")
+#     def sleep(self):
+#         print("Animal sleeps")
+# class Dog(Animal):
+#     def bark(self):
+#         print("Dog barks")
+# d1=Dog()
+# d1.eat()
+# d1.sleep()
+# d1.bark()
+
+# 1.Basic Inheritance
+# 1. Simple Inheritance
+# Create a Vehicle class with a method start().
+# Create a Car class that inherits from Vehicle and adds a method drive().
+
+# 2.Inheriting Multiple Methods
+# Create a Person class with methods walk() and talk().
+# Create a Student class that inherits from Person and adds a method study().
+
+# 3.Override a Method
+# Create a class Bird with a method sound() that prints "Bird sound".
+# Create a class Parrot that overrides sound() and prints "Parrot talks".
+
+
+
+# class Vehicle:  #1
+#     @staticmethod
+#     def start():
+#         print("Car started...")
+
+# class Car(Vehicle):
+#     @staticmethod
+#     def drive():
+#         print("Now,drive the car")
+
+# c1=Car()
+# c1.drive()
+# c1.start()
+    
+
+# class Person:  #2
+#     @staticmethod
+#     def walk():
+#         print("Person can walk")
+#     @staticmethod
+#     def talk():
+#         print("Person can talk")
+# class Student(Person):
+#     @staticmethod
+#     def study():
+#         print("Student can study")
+# s1=Student()
+# s1.walk()
+# s1.talk()
+# s1.study()
+
+
+# class Bird:  #3
+#     @staticmethod
+#     def sound():
+#         print("Bird sound")
+# class Parrot(Bird):
+#     @staticmethod
+#     def sound():
+#         print("Parrot talks")
+# p1=Parrot()
+# p1.sound()
