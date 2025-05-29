@@ -1,0 +1,24 @@
+#super() is a special function in Python that lets the child class call the parent class’s methods.
+
+#Code 1 
+# class Bird:  
+#     def sound(self):
+#         print("Bird sound")
+# class Parrot(Bird):
+#     def sound(self):
+#         super().sound()
+#         print("Parrot talks")
+# p1=Parrot()
+# p1.sound()
+
+#Code 2
+class Employee:
+    def __init__(self,name):
+        self.name=name
+class Manager(Employee):
+    def __init__(self,name,dep):
+        super().__init__(name)
+        self.dep=dep
+e1=Manager("Jos Buttler","HR")
+print(e1.name)
+print(e1.dep)
