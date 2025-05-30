@@ -1,0 +1,15 @@
+class Father:
+    def skills(self):
+        print("Gardening")
+class Mother:
+    def skills(self):
+        print("Cooking")
+class Child(Father,Mother):
+    super
+    def __init__(self,name):
+        self.name=name
+
+c1=Child("Virat")
+print("Child skills inherited from both his mother and father")
+Father.skills(c1)
+Mother.skills(c1)
