@@ -1,0 +1,12 @@
+#making a variable inside a function global 
+x="Great"
+print("Outside function (before making a variable x global):\nHe is ",x)
+print("\n")
+def pr():
+    global x
+    x="Awesome"
+    print("Inside function")
+    print("He is ",x)
+    print("\n")
+pr()
+print("Outside function (after making a varible x global inside a function):\nHe is ",x)
