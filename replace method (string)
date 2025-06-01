@@ -1,0 +1,6 @@
+#replace method (string)
+a="Hi,Cat"
+a=a.replace("C","B")
+
+#Output :
+# Hi, Bat
