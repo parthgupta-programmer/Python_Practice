@@ -1,0 +1,3 @@
+#isinstance() function is used in to check if an object is of a certain data type
+x=35
+print(isinstance(x,float))
