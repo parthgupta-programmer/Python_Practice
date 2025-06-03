@@ -1,0 +1,39 @@
+# CODE 1 ->
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+print(x is z)
+print(x is y)
+
+# Output :
+# True
+# False
+
+
+# CODE 2 ->
+x = 300
+y = 300
+z = x
+
+print(x is z)
+print(x is y)
+
+# Output:
+# True
+# True
+
+
+# Explanation(For CODE 1) :
+# > x and y are two separate list objects with the same contents.
+# > z = x makes z reference the exact same list object as x.
+# > x is z → ✅ True (same object)
+# > x is y → ❌ False (same contents, but different objects)
+# > Lists are mutable, so Python never automatically reuses them
+
+
+
+# Explanation(For CODE 2) :
+# > z = x → ✅ True, because z refers to the same object as x.
+# > x = 300, y = 300 → Maybe the same object, maybe not.
+# Even though 300 is outside the standard integer cache (-5 to 256), Python may still reuse the object depending on how it compiles the code.
