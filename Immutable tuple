@@ -1,0 +1,8 @@
+t1=(1,2,3)
+# t1[1]=5 will raise type error
+# So,tuple for changing the value ,first convert that tuple into list
+l1=list(t1)
+l1[1]=5
+t1=tuple(l1)
+print(t1) #Output:(1,5,3)
+print(type(t1)) #Output: <class 'tuple'>
