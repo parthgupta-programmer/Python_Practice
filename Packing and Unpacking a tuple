@@ -1,0 +1,16 @@
+#Packing and Unpacking a tuple
+
+#Packing-Packing a tuple means assigning values to a tuple
+
+t1=1,2,3,4,5  #Packing
+
+#Unpacking - Unpacking a tuple means to assigning values to variables from a tuple
+
+a,b,c,d,e=t1 #the number of variables on the left must match the number of elements in the tuple (Unpacking)
+print(a,b,c,d,e)
+# Extended Unpacking (using *)
+a,*b,c=t1
+print(a,b,c)
+a,b,*c=t1
+print(a,b,c)
+print()
