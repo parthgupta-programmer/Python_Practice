@@ -1,0 +1,125 @@
+import random
+import time as t
+
+def dot_time():
+    for i in range(3):
+        print(".",end="")
+        t.sleep(0.8)
+    print()
+
+def lbl(s):
+    for i in range(len(s)):
+        print(s[i],end="")
+        t.sleep(0.1)
+
+s="Welcome to the Guess the Number Game"
+
+lbl(s)
+t.sleep(2)
+print()
+print("Press space bar to continue")
+total_points=0
+r=input()
+if(ord(r)==32):
+    print("Game Rules:")
+    print("★ You have to guess the number within the range of numbers selected by you and if you guess the same no. that computer guessed then you will be winning the points.")
+    print("★ You will get only 12 chances.")
+    print("★ You will win the game if your total points is at least 150")
+    print("Range      Winning Points:")
+    print("1.0-10     30\n2.0-25     75\n3.0-50     160\n4.0-100    320")
+    print("★ Remember,you can use 0–10: max 3 times, 0–25: max 4 times\n")
+
+    print()
+    print("Half points : if the guess is ±1 or ±2")
+    print("Quarter points : if guess is ±3 or ±4")
+
+    print()
+    print("Now,Press any key to start the game")
+    r2=input()
+    rng_dct={"0-10":30,"0-25":75,"0-50":160,"0-100":320}
+    rng_lst=list(rng_dct.keys())
+    points_lst=list(rng_dct.values())
+    ten_used=0
+    twenty_used=0
+    j=0 
+    for i in range(12):
+        print(f"\nChance No.{i+1}\n")
+        print("Select the range provided above(1/2/3/4):",end="")
+        rng=int(input())
+        if (rng==1):
+            if(ten_used>2):
+                print("✱ You can use the (0-10) range only twice! Use another.\n")
+                while(rng not in [2,3,4]):
+                    print("➔ Enter Again:",end="")
+                    rng=int(input())
+
+            else:
+                ten_used+=1
+        if(rng==2):
+            if(twenty_used>3):
+                print("✱ You can use the (0-25) range only four times! Use another.\n")
+                while(rng not in [1,3,4]):
+                    print("➔ Enter Again:",end="")
+                    rng=int(input())
+                    if(ten_used>2 and rng==1):
+                        print("✱ You have used all of your (0-10) range turns! Use another.\n")
+                        while(rng not in [3,4]):
+                            print("➔ Enter Again:",end="")
+                            rng=int(input())
+                    
+            else:
+                twenty_used+=1
+        if(rng not in ([1,2,3,4])):
+            print("☒ Wrong number entered!! Enter again")
+            while(rng not in [1,2,3,4]):
+                rng=int(input())
+                if(rng in [1,2,3,4]):
+                    break
+                print("☒ Wrong number entered!! Enter again")
+                
+ 
+        gretting=["☆ Excellent!!","☆ Outstanding!!","☆ Well Done!!","☆ Good Going!!","☆ You are legend!!","☆ Marvellous!!","☆ Magnificent!!"]  
+
+        print(f"Guess any number between {rng_lst[rng-1]} for the points {points_lst[rng-1]} : ",end="")
+        user_guess_number=int(input())
+        computer_guess_number=random.randrange(0,int((rng_lst[rng-1]).split("-")[1])-1)
+        print(f"Waiting for the computer response",end="")
+        dot_time()
+        print(f"Computer Number:{computer_guess_number}")
+        if(user_guess_number==computer_guess_number):
+            print(gretting[j])
+            j+=1
+            print(f"Won Points:{points_lst[rng-1]}")
+            total_points=total_points+points_lst[rng-1]
+            print(f"Total Points:{total_points}")
+        elif(abs(computer_guess_number-user_guess_number)==1 or abs(computer_guess_number-user_guess_number)==2):
+            total_points=total_points+points_lst[rng-1]/2
+        
+            lbl("You were quite close.")
+            
+            print(f"Won Points:{points_lst[rng-1]/2}")
+            print(f"Total Points:{total_points}")
+        elif(abs(computer_guess_number-user_guess_number)==3 or abs(computer_guess_number-user_guess_number)==4):
+            total_points=total_points+points_lst[rng-1]/4
+            
+            lbl("You were much close.")
+            print(f"Won Points:{points_lst[rng-1]/4}")
+            print(f"Total Points:{total_points}")
+        else:
+            total_points=total_points
+            print("Won Points:",0)
+            print(f"Total Points:{total_points}")
+
+
+
+
+
+else:
+    print("Start the game again.")
+
+print()
+print(f"You have won {total_points} points.")
+if(total_points>=150):
+    print("Congratulations!! You have won the game.")
+else:
+    print("You did not win the game.Don't Worry!!")
