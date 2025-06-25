@@ -12,7 +12,7 @@ print(s1) #O/P: {1,2,3} In this case,1 is printed
 
 # But in this case:
 s2={True,1,2,3,2,3,1,8,7}
-print(s2)  #O/P: {True,2,3} In this case ,True is printed
+print(s2)  #O/P: {True,2,3,8,7} In this case ,True is printed
 
 # We cannot change the item of a set,rather we can add or remove the item fron the sets.
 # add() method 
@@ -44,6 +44,4 @@ print(s1) # O/P : set() [It deletes all the elements present in the set]
 # del method 
 
 del s2
-print(s2)
-
-
+print(s2)  #O/P : Name Error : name 's2' is not defined.
