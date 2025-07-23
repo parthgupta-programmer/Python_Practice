@@ -41,6 +41,12 @@
 # c1.start()
     
 
+# Output
+
+# Car started...
+# Now,drive the car
+
+
 # class Person:  #2
 #     @staticmethod
 #     def walk():
@@ -57,6 +63,12 @@
 # s1.talk()
 # s1.study()
 
+# Output
+
+# Person can walk
+# Person can talk
+# Student can study
+
 
 # class Bird:  #3
 #     @staticmethod
@@ -68,3 +80,7 @@
 #         print("Parrot talks")
 # p1=Parrot()
 # p1.sound()
+
+# Output
+# Parrot talks
+
