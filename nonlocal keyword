@@ -1,0 +1,8 @@
+def function1():
+    x="Virat Kohli"
+    def function2():
+        nonlocal x
+        x="Mahendra Singh Dhoni"
+    function2()
+    return x
+print(function1())
