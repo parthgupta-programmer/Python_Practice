@@ -1,0 +1,11 @@
+a=int(input())
+b=int(input())
+
+# divmod function takes two numbers as input and returns the tuple containing two elements :
+# first as the result of a/b (Quotient)
+# second as the result of a%b (Remainder)
+
+t=divmod(a,b)
+print(t[0])
+print(t[1])
+print(t)
