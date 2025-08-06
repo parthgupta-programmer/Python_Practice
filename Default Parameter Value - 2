@@ -1,0 +1,32 @@
+def add(a,b=5): # here b is a default immutable argument
+    return a+b
+
+print(add(5,5)) # 10
+print(add(2,9)) # 11
+print(add(7))   # 12
+
+def add_list(a,b=[3,4,5]): # here,b is a list which is here a default mutable argument
+    b.append(a)
+    return b
+
+# Since , argument b is default mutable ,hence the output three comes below to be # [3, 4, 5, 2, 3] ,this is because b is reused across function calls.
+
+print(add_list(1,[1,2])) # value of b is passed ,so it will simply append the list with b=[1,2] and a=1 and result as [1, 2, 1]
+print(add_list(2)) # now,the b is not passed,hence the default value will be used so the output will result as [3, 4, 5, 2] 
+print(add_list(3)) # now,the b is again not passed,hence since the b is default mutable argument then it will be reused after this function call i.e. now b=[3,4,5,2] and append a=3 and result as [3, 4, 5, 2, 3]
+
+# In short: Default values are evaluated only ONCE and after its first use it is then reused after every function call.
+# Rule of Thumb:Never use mutable objects (like lists or dicts) as default arguments!
+
+def add_list(a,b=None):
+    if (b==None):
+        b=[]
+        b.append(a)
+        return b
+    else:
+        b.append(a)
+        return b
+
+print(add_list(1,[1,2])) # [1, 2, 1]
+print(add_list(2))  # [1]
+print(add_list(3))  # [2]
