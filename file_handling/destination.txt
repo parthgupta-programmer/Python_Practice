@@ -1,0 +1,4 @@
+Hello ,Welcome to the World of Python.
+Python is very beautiful.
+I love it.
+One can find the beauty by learning this language in a ease manner.

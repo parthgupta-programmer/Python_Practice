@@ -6,3 +6,5 @@ def function1():
     function2()
     return x
 print(function1())
+
+# nonlocal keyword makes the variable belong to the  outer function.

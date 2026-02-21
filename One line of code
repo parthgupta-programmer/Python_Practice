@@ -1,5 +1,5 @@
 for  i in range(10):
-    if x==4:
+    if i==4:
         print("4 is present in the given range")
 #The same code can be done in a single line of code:
 print([int(x) for x in range(10) if x==4])

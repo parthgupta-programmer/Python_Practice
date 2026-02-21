@@ -10,7 +10,17 @@ x= d1.setdefault("Color","Black") # value exist
 print(x)
 print(d1)
 
+
+# O/P :
+# Black
+# {'Brand': 'Ford', 'Model': 'Mustang', 'Year': 1964, 'Color': 'Black'}
+
+
 d2={"Brand":"Ford","Model":"Mustang","Year":1964}
-x=d2.setdefault("Color")
+x=d2.setdefault("Color") # value does not exist ,by default the value of this key gets stored as None.
 print(x)
 print(d2)
+
+# O/P :
+# None
+# {'Brand': 'Ford', 'Model': 'Mustang', 'Year': 1964, 'Color': None}

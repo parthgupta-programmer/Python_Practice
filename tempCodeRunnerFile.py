@@ -1,2 +1,2 @@
-for i in range(r):
-#     print(input_grid[i])
+print(normal_function()) # 1
+# print(normal_function()) # 1

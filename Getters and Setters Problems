@@ -13,8 +13,8 @@
 # 2. Temperature Converter:
 
 # Create a class Temperature that stores temperature in Celsius.
-# How will you provide a read-only property fahrenheit that calculates and returns temperature in Fahrenheit?
-# What happens if someone tries to set the fahrenheit directly?
+# How will you provide a read-only property kelvin that calculates and returns temperature in kelvin?
+# What happens if someone tries to set the kelvin directly?
 
 # 3. Bank Account:
 
@@ -91,12 +91,12 @@
 #     def __init__(self,cel):
 #         self.__cel=cel
 #     @property
-#     def fahrenheit(self):
+#     def kelvin(self):
 #         return (self.__cel + 273.15)
 # t1=temp(36)
-# print(t1.fahrenheit)
-# # t1.fahrenheit=310.35
-# # print(t1.fahrenheit) #  if someone tries to set the fahrenheit directly ,it will not set
+# print(t1.kelvin)
+# # t1.kelvin=310.35
+# # print(t1.kelvin) #  if someone tries to set the kelvin directly ,it will not set
 
 
 # Output 2 :

@@ -1,0 +1,12 @@
+This is a very friendly languageThis is easy to learnHello ,Welcome to the World of Python.
+Python is very beautiful.
+I love it.
+One can find the beauty by learning this language in a ease manner.Hello ,Welcome to the World of Python 3.13.
+Python is very beautiful.
+I love it.
+One can find the beauty by learning this language in a ease manner.
+Appending data to the end of a file.Hello ,Welcome to the World of Python 3.13.
+Python is very beautiful.
+I love it.
+One can find the beauty by learning this language in a ease manner.
+Appending data to the end of a file.

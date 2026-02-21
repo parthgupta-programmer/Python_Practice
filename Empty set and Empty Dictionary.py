@@ -10,3 +10,10 @@ print(type(s2))
 # Output :
 # <class 'dict'>
 # <class 'set'> 
+
+x=10
+y=10
+z=10
+print(id(x))
+print(id(y))
+print(id(z))
