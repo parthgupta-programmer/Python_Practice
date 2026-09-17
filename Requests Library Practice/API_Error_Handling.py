@@ -60,6 +60,23 @@ try:
 except requests.exceptions.ConnectTimeout:
     print("Request timed out!")
 
+# Handling Rate Limits(429)
+
+import time
+
+url=''
+
+reponse=requests.get(url,timeout=10)
+
+if response.status_code==429:
+    print('Rate limit Reached.Waiting...')
+    time.sleep(5)
+    response=requests.get(url,timeout=10)
+
+# It waits and retry.
+
+
+
 
 
 
