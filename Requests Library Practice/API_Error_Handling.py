@@ -1,6 +1,6 @@
 import requests
 
-url=''
+url='https://api.freeapi.app/api/v1/public/randomusers/user/random'
 
 response=requests.get(url,timeout=10)
 
@@ -25,5 +25,25 @@ try:
 
 except requests.exceptions.HTTPError as error:
     print('Error Occurred: ',error)
+
+# Handling Different Errors
+
+try:
+    response=requests.get(url,timeout=10)
+    response.raise_for_status()
+    print(response.json())
+
+except requests.exceptions.Timeout:
+    print('The request timed out.')
+
+except requests.exceptions.ConnectionError:
+    print('Could not connect to the server.')
+
+except requests.exceptions.JSONDecodeError:
+    print('Invalid JSON response.')
+
+except requests.exceptions.RequestException as err:
+    print('Request Error: ',err)
+
 
 
