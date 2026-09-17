@@ -46,4 +46,24 @@ except requests.exceptions.RequestException as err:
     print('Request Error: ',err)
 
 
+# Debugging a failed request
+
+try:
+    response = requests.get("http://10.255.255.1", timeout=5)
+
+    print('FINAL URL: ', response.url)
+    print('Status Code: ', response.status_code)
+    print('Request headers: ', response.request.headers)
+    print('Request body: ', response.request.body)
+    print('Raw Response: ', response.text)
+
+except requests.exceptions.ConnectTimeout:
+    print("Request timed out!")
+
+
+
+
+
+
+
 
